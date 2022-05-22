@@ -3,9 +3,13 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 
+require('./db/Mongo.conn')
+
 var users = require('./routes/users');
-var students = require('./routes/student/StudentRoute')
-var professors = require('./routes/professor/ProfessorRoute')
+//var students = require('./routes/student/StudentRoute')
+//var professors = require('./routes/professor/ProfessorRoute')
+var students = require('./routes/student/Mongo.StudentRoute')
+var professors = require('./routes/professor/Mongo.ProfessorRoutes')
 
 var app = express();
 
